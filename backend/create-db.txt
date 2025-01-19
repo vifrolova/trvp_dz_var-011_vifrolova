@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS hr_agency;
+USE hr_agency;
+
+CREATE TABLE IF NOT EXISTS managers (
+    manager_id INT AUTO_INCREMENT PRIMARY KEY,  
+    manager_name VARCHAR(255) NOT NULL,  -- имя менеджера
+    start_time TIME NOT NULL,            -- время начала работы
+    end_time TIME NOT NULL               -- время окончания работы
+);
+
+CREATE TABLE IF NOT EXISTS skills (
+    skill_id INT AUTO_INCREMENT PRIMARY KEY,  
+    skill_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS manager_skills (
+    manager_id INT,
+    skill_id INT,
+    PRIMARY KEY (manager_id, skill_id),      
+    FOREIGN KEY (manager_id) REFERENCES managers(manager_id) ON DELETE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES skills(skill_id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS manager_interviews (
+    interview_id INT AUTO_INCREMENT PRIMARY KEY,
+    manager_id INT,
+    candidate_name VARCHAR(255),
+    start_time TIME NOT NULL,
+    FOREIGN KEY (manager_id) REFERENCES managers(manager_id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS interview_skills (
+    interview_id INT,
+    skill_id INT,
+    PRIMARY KEY (interview_id, skill_id),      
+    FOREIGN KEY (interview_id) REFERENCES manager_interviews(interview_id) ON DELETE CASCADE,
+    FOREIGN KEY (skill_id) REFERENCES skills(skill_id) ON DELETE CASCADE
+);
