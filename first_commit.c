@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // Функция 1: Без параметров
 void printHello() {
@@ -6,7 +7,7 @@ void printHello() {
 }
 
 // Функция 2: С параметром
-void printSum(int a, int b) {
+void printSuum(int a, int b) {
     printf("Sum: %d\n", a + b);
 }
 
@@ -16,8 +17,8 @@ int multiply(int a, int b) {
 }
 
 // Функция 4: Без параметров
-void printGoodbye() {
-    printf("Goodbye!\n");
+void printRandomNumber() {
+    printf("Random number: %d\n", rand() % 100);
 }
 
 // Функция 5: С параметром
@@ -25,50 +26,56 @@ void printSquare(int num) {
     printf("Square of %d: %d\n", num, num * num);
 }
 
-// Функция 6: Без параметров
-void printRandomNumber() {
-    printf("Random number: %d\n", rand() % 100);
-}
-
-// Функция 7: С параметром
+// Функция 6: С параметром
 void greetUser(const char* name) {
     printf("Hello, %s!\n", name);
 }
 
-// Функция 8: С параметром
-void printArray(int arr[], int size) {
-    printf("Array elements: ");
+// Функция 7: С двумя параметрами
+void printArray(int arr[], int size, int offset) {
+    printf("Array elements with offset %d: ", offset);
     for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", arr[i] + offset);
     }
     printf("\n");
 }
 
-// Функция 9: Без параметров
-void printMessage() {
-    printf("This is a message from printMessage function.\n");
+// Функция 8: Без параметров
+void printMesssage() {
+    printf("This is a message from printMesssage function.\n");
 }
 
-// Функция 10: С параметром
+// Функция 9: С параметром
 void findMax(int a, int b) {
     int max = (a > b) ? a : b;
     printf("Max: %d\n", max);
 }
 
+// Функция 10: С параметром
+void printDifference(int a, int b) {
+    printf("Difference: %d\n", a - b);
+}
+
+// Функция 11: С параметром
+void printCube(int num) {
+    printf("Cube of %d: %d\n", num, num * num * num);
+}
+
 int main() {
     printHello();
-    printSum(5, 10);
+    printSuum(5, 10);
     int product = multiply(4, 6);
     printf("Product: %d\n", product);
-    printGoodbye();
-    printSquare(7);
     printRandomNumber();
+    printSquare(7);
     greetUser("Alice");
 
     int arr[] = {1, 2, 3, 4, 5};
-    printArray(arr, 5);
-    printMessage();
+    printArray(arr, 5, 2); // Пример использования нового параметра offset
+    printMesssage();
     findMax(15, 20);
+    printDifference(10, 4);
+    printCube(3);
 
     return 0;
 }
