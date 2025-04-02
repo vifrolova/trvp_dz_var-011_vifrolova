@@ -6,10 +6,10 @@ void printHello() {
     printf("Hello, World!\n");
 }
 
-// Функция 2: С параметром
-void printSuum(int a, int b) {
-    printf("Sum: %d\n", a + b);
-}
+// // Функция 2: С параметром
+// void printSuum(int a, int b) {
+//     printf("Sum: %d\n", a + b);
+// }
 
 // Функция 3: С параметром
 int multiply(int a, int b) {
