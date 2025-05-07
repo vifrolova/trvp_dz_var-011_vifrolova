@@ -6,10 +6,10 @@ void printHello() {
     printf("Hello, World!\n");
 }
 
-// // Функция 2: С параметром
-// void printSuum(int a, int b) {
-//     printf("Sum: %d\n", a + b);
-// }
+// Функция 2: С параметром
+void printSumm(int a, int b) {
+    printf("Summ: %d\n", a + b);
+}
 
 // Функция 3: С параметром
 int multiply(int a, int b, int c) {
@@ -32,8 +32,8 @@ void greetUser(const char* name) {
 }
 
 // Функция 7: С двумя параметрами
-void printArray(int arr[], int size, int offset) {
-    printf("Array elements with offset %d: ", offset);
+void printArray(int arr[], int size) {
+    printf("Array elements with offset %d: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i] + offset);
     }
