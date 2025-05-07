@@ -127,8 +127,6 @@ include <strings.h>
 
 // Заданные области памяти не пересекаются.
 
-//==================================================================================================
-
 VOID MemCopy(VOID* dst, CONST VOID* src, SIZE_TYPE length)
 
 {
@@ -229,9 +227,7 @@ VOID MemFill(VOID* mem, UINT8 fillValue, SIZE_TYPE length)
 
 //   TRUE - Строки равны.
 
-//   FALSE - Строки не равны.
-
-//==================================================================================================
+//   FALSE - Строки не равны
 
 BOOL StringIsEqual(CONST CHAR* first, CONST CHAR* second)
 
