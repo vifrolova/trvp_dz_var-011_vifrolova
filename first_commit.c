@@ -6,9 +6,9 @@ void printHello() {
     printf("Hello, World!\n");
 }
 
-// Функция 2: С параметром
-void printSumm(int a, int b) {
-    printf("Summ: %d\n", a + b);
+// Функция 2: Изменилось количество параметров и имя
+void printSumma(int a, int b, int c) {
+    printf("Summ: %d\n", a + b + c);
 }
 
 // Функция 3: С параметром
@@ -26,24 +26,24 @@ void printSquare(int num) {
     printf("Square of %d: %d\n", num, num * num);
 }
 
-// Функция 6: С параметром
-void greetUser(const char* name) {
+// Функция 6: Изменилось имя
+void greetUsers(const char* name) {
     printf("Hello, %s!\n", name);
 }
 
-// Функция 7: С двумя параметрами
-void printArray(int arr[], int size) {
-    printf("Array elements with offset %d: ");
+// Функция 7: Изменилось количество параметров
+void printArray(int arr[], int size, int offset) {
+    printf("Array elements with offset %d: ", offset);
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i] + offset);
     }
     printf("\n");
 }
 
-// Функция 8: Без параметров
-void printMesssage() {
-    printf("This is a message from printMesssage function.\n");
-}
+// Функция 8: Удалена
+// void printMesssage() {
+//     printf("This is a message from printMesssage function.\n");
+// }
 
 // Функция 9: С параметром
 void findMax(int a, int b) {
@@ -59,6 +59,11 @@ void printDifference(int a, int b) {
 // Функция 11: С параметром
 void printCube(int num) {
     printf("Cube of %d: %d\n", num, num * num * num);
+}
+
+// Функция 12: Добавлена
+void printAge(int age) {
+    printf("Age is: %d\n", age);
 }
 
 int main() {
