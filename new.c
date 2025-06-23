@@ -6,7 +6,7 @@ void print2(const int a) {
 	printf("%d", a);
 }
 
-int foo(VOID) 
+int foo( void) 
 {
 	return 0;
 }
