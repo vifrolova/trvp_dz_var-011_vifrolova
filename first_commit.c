@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// файл изменен 23.07.2025
+
 // Функция 1: Без параметров
 void printHello() {
     printf("Hello, World!\n");
